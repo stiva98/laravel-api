@@ -9,6 +9,17 @@ class Post extends Model
 {
     use HasFactory;
 
+    protected $appends = [
+        'full_cover_image'
+    ];
+
+    public function getFullCoverImage() 
+    {
+        if($this->cover_image) {
+            return asset(`storage/ . $this->cover_image`);
+        }
+    }
+
     public function type()
     {
         return $this->belongsTo(Type::class);
