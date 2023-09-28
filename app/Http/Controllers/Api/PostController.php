@@ -31,13 +31,13 @@ class PostController extends Controller
             return response()->json([
                 'success' => true,
                 'results' => $post
-            ]);
+            ], 200);
         }
         else {
             return response()->json([
                 'success' => false,
                 'message' => 'Not found'
-            ]);
+            ], 404);
         }
     }
 };

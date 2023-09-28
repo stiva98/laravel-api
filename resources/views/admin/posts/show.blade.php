@@ -22,7 +22,7 @@
                     <h5 class="card-title">{{ $post->title }}</h5>
                     @if ($post->cover_image)
                         <div>
-                            <img src="{{ $post->full_cover_image }}" alt="{{ $post->title }}" class="w-100">
+                            <img src="/storage/{{ $post->cover_image }}" alt="{{ $post->title }}" class="w-100">
                         </div>
                     @endif
                     <p class="card-text">
